@@ -12,16 +12,16 @@
 
     <body>
 
-        <div class="container mt-5">
+        <h1 class="text-center mt-5">Add new product</h1>
+
+        <div class="container w-50 mt-5">
 
             <form action="{{ path('product-add-new') }}" method="POST">
-                <input type="text" placeholder="Name" name="product_name">
-                <input type="text" placeholder="Price" name="product_price">
-                <input type="text" placeholder="Slug" name="product_slug">
-                <button type="submit" name="add_new_btn">Add new</button>
+                <input class="form-control mb-3" type="text" placeholder="Name" name="product_name">
+                <input class="form-control mb-3" type="text" placeholder="Price" name="product_price">
+                <input class="form-control mb-3" type="text" placeholder="Slug" name="product_slug">
+                <button class="btn btn-primary  mt-4" type="submit" name="add_new_btn">Add new</button>
             </form>
-            
-            {{dump(request)}};
 
         </div>
 

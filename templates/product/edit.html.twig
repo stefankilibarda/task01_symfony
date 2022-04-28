@@ -12,15 +12,19 @@
 
     <body>
 
-        <div class="container mt-5">
+        <h1 class="text-center mt-5">Edit product: {{ product.name }} </h1>
+
+        <div class="container w-50 mt-5">
 
             <form action="{{ path('product-edit-product', {'id': product.id}) }}" method="POST">
-                <input type="text" placeholder="Name" name="product_name" value="{{ product.name }}">
-                <input type="text" placeholder="Price" name="product_price" value="{{ product.price }}">
-                <input type="text" placeholder="Slug" name="product_slug" value="{{ product.slug }}">
-                <button type="submit" name="edit-btn">Update</button>
+                <input class="form-control mb-3" type="text" placeholder="Name" name="product_name" value="{{ product.name }}">
+                <input class="form-control mb-3" type="text" placeholder="Price" name="product_price" value="{{ product.price }}">
+                <input class="form-control mb-3" type="text" placeholder="Slug" name="product_slug" value="{{ product.slug }}">
+                <button class="btn btn-primary  mt-4" type="submit" name="edit-btn">Update</button>
             </form>
 
+
+            
         </div>
 
     </body>
